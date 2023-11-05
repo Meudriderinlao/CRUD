@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/6a972cf3a7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400&display=swap" rel="stylesheet">
+	<style>
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+button {   
+       background-color: #4CAF50;   
+       width: 100%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;  
+    }   
+	</style>
+</head>
+
+<body>
+	<div class="container d-flex align-items-center justfy-conten-center min-vh-100">
+		<div class="row justify-content-md-center">
+			<div class="col-6">
+				<br>
+        <div class="card  border-primary mb-6 " style="max-width:150rem;">
+		<div class="card-header text-white bg-primary">
+		<i class="fas fa-address-card"></i> ทะเบียนทรัพย์สินไทยดิวลาว
+		</div>
+		<div class="card-body text-success">
+						<form id="myForm" onsubmit="handleFormSubmit(this)">
+              <div class="form-row">
+								<div class="form-group col-md-6">
+	                    <label for="Header">บริษัท</label>
+                      <select id="Header" name="Header" class="form-control" required>
+                        <option selected disabled value="">เลือกบริษัท</option>
+                        <option value="รถเจาะไทย">รถเจาะไทย</option>
+                        <option value="ไทยดิวลาว">ไทยดิวลาว</option>
+                        <option value="Sunny Machinery">Sunny Machinery</option>
+                        </select>
+                            </div>
+									<div class="form-group col-md-6">
+	                    <label for="Number">รายการรับเข้า-จ่ายออก</label>
+                      <select id="Number" name="Number" class="form-control" required>
+                        <option selected disabled value=""></option>
+                        <option value="รับเข้า">รับเข้า</option>
+                        <option value="จ่ายออก">จ่ายออก</option>
+                        </select>
+                            </div>
+                  <div class="form-group col-md-6">
+	                    <label for="Department">แผนก_ฝ่าย</label>
+                      <select id="Department" name="Department" class="form-control" required>
+                        <option selected disabled value=""></option>
+                        <option value="ช่อมบำรุง">ช่อมบำรุง</option>
+                          <option value="โยธา">โยธา</option>
+                          <option value="คลังพัสดุ">คลังพัสดุ</option>
+                          <option value="Operation">Operation</option>
+                          <option value="HR">HR</option>
+                          <option value="HR_site">HR_site</option>
+                          <option value="Safety_N">Safety_N</option>
+                        </select>
+                    </div>
+                  <div class="form-group col-md-6">
+	                  <label for="Type">ประเภท</label>
+                    <select id="Type" name="Type" class="form-control" required>
+                       <option selected disabled value=""></option>
+                      <option value="อุปกรณ์สำนักงาน">อุปกรณ์สำนักงาน</option>
+                          <option value="เครื่องมือเครื่องใช้">เครื่องมือเครื่องใช้ </option>
+                          <option value="เครื่องจักร">เครื่องจักร</option>
+                          <option value="ยานพาหนะ">ยานพาหนะ</option>
+                          <option value="ส่วนต่อเติมยานพาหนะ">ส่วนต่อเติมยานพาหนะ</option>
+                          <option value="เครื่องตกแต่งสำนักงาน">เครื่องตกแต่งสำนักงาน</option>
+                          <option value="ต่อเติมอาคารสำนักงาน">ต่อเติมอาคารสำนักงาน</option>
+                        </select>               
+									</div>
+								<div class="form-group col-6">
+									<label for="Description1">รายการ</label>
+									<input type="Description1" class="form-control" id="Description1" name="Description1" placeholder="">
+                  <label for="Sku1">ระหรัส</label>
+                  <input type="Sku1" class="form-control" id="Sku1" name="Sku1" placeholder="">
+									<label for="Qty1">จำนวน</label>
+									<input type="Qty1" class="form-control" id="Qty1" name="Qty1" placeholder="">
+									<label for="Remarks">ผู้บันทืกข้อมูล</label>
+									<input type="Remarks" class="form-control" id="Remarks" name="Remarks" placeholder="ผู้บันทืกข้อมูล" required>
+                </div>
+								        <button type="submit" class="btn btn-primary btn-block">บันทึก</button>
+                </div>
+						</form>
+						<div id="output"></div>
+					</div>
+				</div>
+		</div>
+		<script>
+			function preventFormSubmit(){
+    var forms=document.querySelectorAll('form');
+    for (var i=0;i<forms.length;i++){
+      forms[i].addEventListener('submit',function(event){
+        event.preventDefault();
+      });
+    }
+  }
+window.addEventListener('load',preventFormSubmit);
+
+function handleFormSubmit(formObject){
+  google.script.run.processForm(formObject);
+  document.getElementById("myForm").reset();
+    Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'บันทืกเรียบร้อย',
+  showConfirmButton: false,
+  timer: 1500
+})
+
+}
+		</script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
