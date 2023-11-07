@@ -1,0 +1,23 @@
+<script>
+                  window.onload = function(){ 
+            pass()
+}
+        async function pass(){
+const { value: password } = await Swal.fire({
+  title: "Enter your password",
+  input: "password",
+  inputLabel: "Password",
+  inputPlaceholder: "Enter your password",
+  inputAttributes: {
+    maxlength: "10",
+    autocapitalize: "off",
+    autocorrect: "off"
+  }
+});
+if (password) {
+  Swal.fire(`Entered password: ${password}`);
+}
+
+} 
+      <script src= "https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
